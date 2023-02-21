@@ -1,30 +1,19 @@
 #include <stdio.h>
-
 /**
- * main - natural numbers multiples of 3 or 5 to 1024
+ *main - check for multiples of 3 and 5
  *
- * Return: always 0
- */
-
+ *Return: 0 always
+*/
 int main(void)
 {
-
-int s, t, f, tm, fm;
-
-s = 0;
-for (t = 0; t <= (1024 / 3); t++)
-{
-tm = 3 * t;
-s = s + tm;
-}
-for (f = 0; f <= (1024 / 5); f++)
-{
-if (!(f % 3 == 0))
-{
-fm = 5 * f;
-s = s + fm;
-}
-}
-printf("%i\n", s);
-return (0);
+	int x = 1024, y, sum = 0;
+	for (y = 0; y < x; y++)
+	{
+		if ((y % 3 == 0) || (y % 5 == 0))
+		{
+			sum = sum + y;
+		}
+	}
+	printf("%d\n", sum);
+	return (0);
 }
