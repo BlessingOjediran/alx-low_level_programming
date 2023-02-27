@@ -1,9 +1,9 @@
-nclude <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 /**
- *  * main - generates keygen.
- *   * Return: 0 Always.
+ * main - generates keygen.
+ * Return: 0 Always.
  */
 int main(void)
 {
@@ -13,11 +13,11 @@ int main(void)
 	srand((unsigned int) time(&t));
 	while (c < 2772)
 	{
-	r = rand() % 128;
-	if ((c + r) > 2772)
-	break;
-	c = c + r;
-	printf("%c", r);
+		r = rand() % 128;
+		if ((c + r) > 2772)
+			break;
+		c = c + r;
+		printf("%c", r);
 	}
 	printf("%c\n", (2772 - c));
 	return (0);
