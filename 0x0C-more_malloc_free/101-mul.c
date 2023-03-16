@@ -13,6 +13,7 @@ void _print(char *str, int l)
 	int i, j;
 
 	i = j = 0;
+
 	while (i < l)
 	{
 	if (str[i] != '0')
