@@ -1,18 +1,17 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdlib.h>
-/**
- *malloc_checked- assigns memory using malloc
- *@b: the number of byte to be assignd to
- *Return: new pointer on success
- */
 
+/**
+ * malloc_checked - Main Entry
+ * @b: input
+ * Return: 0
+ */
 void *malloc_checked(unsigned int b)
 {
-	void *newpointer = malloc(b);
+	void *p;
 
-	if (newpointer == NULL)
-	{
+	p = malloc(b);
+	if (p == NULL)
 		exit(98);
-	}
-	return (newpointer);
+	return (p);
 }

@@ -1,49 +1,41 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdlib.h>
-/**
- *string_nconcat-concatinates two strings
- *@s1: holberton
- *@s2: school
- *@n:checked
- *Return: concatinated string
- */
 
+/**
+ * string_nconcat - Main Entry
+ * @s1: input
+ * @s2: input
+ * @n: input
+ * Return: 0
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *varcon;
-
-	unsigned int i, j, len = n;
+	unsigned int i, j, k;
+	char *s;
 
 	if (s1 == NULL)
-		s1 = "";
+		i = 0;
+	else
+	{
+		for (i = 0; s1[i]; i++)
+			;
+	}
 	if (s2 == NULL)
-		s2 = "";
-
-	for (i = 0; s1[i]; i++)
-		;
-
-	for (j = 0; s2[j]; j++)
-		;
-
+		j = 0;
+	else
+	{
+		for (j = 0; s2[j]; j++)
+			;
+	}
 	if (j > n)
 		j = n;
-
-	varcon = malloc(sizeof(char) * (i + j + 1));
-
-	if (varcon == NULL)
+	s = malloc(sizeof(char) * (i + j + 1));
+	if (s == NULL)
 		return (NULL);
-
-	for (len = 0; len < i; len++)
-	{
-		varcon[len] = s1[len];
-	}
-
-	for (len = 0; len < j; len++)
-	{
-		varcon[len + i] = s2[len];
-	}
-
-	varcon[i + j] = '\0';
-
-	return (varcon);
+	for (k = 0; k < i; k++)
+		s[k] = s1[k];
+	for (k = 0; k < j; k++)
+		s[k + i] = s2[k];
+	s[i + j] = '\0';
+	return (s);
 }

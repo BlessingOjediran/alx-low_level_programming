@@ -1,3 +1,1 @@
-**More malloc and free**
-====================================
-He who is not courageous enough to take risks will accomplish nothing in life
+# 0x0C. C - More malloc, free
