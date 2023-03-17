@@ -24,7 +24,6 @@ void _print(char *str, int l)
 	_putchar('\n');
 	free(str);
 }
-
 /**
  *  mul - multiplies a char with a string and places the answer into dest
  *  @n: char to multiply
@@ -78,7 +77,6 @@ int check_for_digits(char **av)
 	}
 	return (0);
 }
-
 /**
  * init - initializes a string
  * @str: sting to initialize
@@ -93,7 +91,6 @@ void init(char *str, int l)
 	str[i] = '0';
 	str[i] = '\0';
 }
-
 /**
  *  main - multiply two numbers
  *  @argc: number of arguments
